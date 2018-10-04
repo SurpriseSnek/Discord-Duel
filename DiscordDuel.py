@@ -10,6 +10,7 @@ from discord import Game
 Client = discord.client
 client = commands.Bot(command_prefix = '**')
 Clientdiscord = discord.Client()
+global command_prefix
 command_prefix = '**'
 
 @client.event
@@ -32,7 +33,6 @@ Forfeit - Forfeit a your current duel
 
     #Prefix Command
     if str(command_prefix) + 'Prefix ' in message.content:
-	global command_prefix
         await client.send_message(message.channel,"Discord Duel's prefix has been changed to " + message.content[len(str(command_prefix) + 'Prefix '):])
         command_prefix = message.content[len(str(command_prefix) + 'Prefix '):]
         
