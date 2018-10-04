@@ -32,7 +32,7 @@ Forfeit - Forfeit a your current duel
 
     #Prefix Command
     if str(command_prefix) + 'Prefix ' in message.content:
-		global command_prefix
+	global command_prefix
         await client.send_message(message.channel,"Discord Duel's prefix has been changed to " + message.content[len(str(command_prefix) + 'Prefix '):])
         command_prefix = message.content[len(str(command_prefix) + 'Prefix '):]
         
